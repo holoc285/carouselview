@@ -6,6 +6,7 @@ CarouselView
 
 ~ In this fork I migrated to androidx and catched IllegalArgumentException in ViewPager, which prevented the usage of this library in combination with https://github.com/chrisbanes/PhotoView. Many thanks to the original editors' libraries ~
 
+
 A simple yet flexible library to add carousel view in your android application.
 
 
