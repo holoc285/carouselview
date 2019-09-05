@@ -92,7 +92,19 @@ public class CarouselViewPager extends ViewPager {
                 break;
         }
 
-        return super.onTouchEvent(ev);
+        try {
+            return super.onTouchEvent(ev);
+        } catch (IllegalArgumentException e) {
+            return false;
+        }
     }
 
+    @Override
+    public boolean onInterceptTouchEvent(MotionEvent ev) {
+        try {
+            return super.onInterceptTouchEvent(ev);
+        } catch (IllegalArgumentException e) {
+            return false;
+        }
+    }
 }
