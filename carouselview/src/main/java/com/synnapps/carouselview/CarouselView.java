@@ -5,8 +5,8 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -305,6 +305,13 @@ public class CarouselView extends FrameLayout {
         this.autoPlay = false;
     }
 
+    public boolean isLockScroll() {
+        return containerViewPager.isLockScroll();
+    }
+
+    public void setLockScroll(boolean lockScroll) {
+        this.containerViewPager.setLockScroll(lockScroll);
+    }
 
     private class CarouselPagerAdapter extends PagerAdapter {
         private Context mContext;

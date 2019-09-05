@@ -4,6 +4,8 @@ CarouselView
 =======
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-CarouselView-green.svg?style=true)](https://android-arsenal.com/details/1/3289)
 
+~ In this fork I migrated to androidx and catched IllegalArgumentException in ViewPager, which prevented the usage of this library in combination with https://github.com/chrisbanes/PhotoView. Many thanks to the original editors' libraries ~
+
 A simple yet flexible library to add carousel view in your android application.
 
 
