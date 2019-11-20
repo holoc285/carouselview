@@ -249,12 +249,23 @@ public class CarouselView extends FrameLayout {
         CarouselPagerAdapter carouselPagerAdapter = new CarouselPagerAdapter(getContext());
         containerViewPager.setAdapter(carouselPagerAdapter);
         if(getPageCount() > 1) {
-            mIndicator.setViewPager(containerViewPager);
-            mIndicator.requestLayout();
-            mIndicator.invalidate();
-            containerViewPager.setOffscreenPageLimit(getPageCount());
+            showTabs();
             playCarousel();
+        } else {
+            hideTabs();
         }
+    }
+
+    private void showTabs() {
+        mIndicator.setVisibility(View.VISIBLE);
+        mIndicator.setViewPager(containerViewPager);
+        mIndicator.requestLayout();
+        mIndicator.invalidate();
+        containerViewPager.setOffscreenPageLimit(getPageCount());
+    }
+
+    private void hideTabs() {
+        mIndicator.setVisibility(View.INVISIBLE);
     }
 
     private void stopScrollTimer() {
