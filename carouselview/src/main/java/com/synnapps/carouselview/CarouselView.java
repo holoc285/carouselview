@@ -261,7 +261,6 @@ public class CarouselView extends FrameLayout {
         mIndicator.setViewPager(containerViewPager);
         mIndicator.requestLayout();
         mIndicator.invalidate();
-        containerViewPager.setOffscreenPageLimit(getPageCount());
     }
 
     private void hideTabs() {
