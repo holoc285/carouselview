@@ -426,10 +426,11 @@ public class CarouselView extends FrameLayout {
         public void run() {
             containerViewPager.post(new Runnable() {
                 public void run() {
-
-                    int nextPage = (containerViewPager.getCurrentItem() + 1) % getPageCount();
-
-                    containerViewPager.setCurrentItem(nextPage, 0 != nextPage || animateOnBoundary);
+                    int currentPage = getPageCount();
+                    if(currentPage > 0) {
+                        int nextPage = (containerViewPager.getCurrentItem() + 1) % currentPage;
+                        containerViewPager.setCurrentItem(nextPage, 0 != nextPage || animateOnBoundary);
+                    }
                 }
             });
         }
