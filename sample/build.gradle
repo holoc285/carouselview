@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 33
 
     defaultConfig {
         applicationId "com.synnapps.example.carouselview"
         minSdkVersion 16
-        targetSdkVersion 28
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
     }
@@ -22,9 +22,13 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    testImplementation 'junit:junit:4.12'
-    implementation 'androidx.appcompat:appcompat:1.0.0'
-    implementation 'com.synnapps:carouselview:0.1.4'
-    implementation 'com.squareup.picasso:picasso:2.5.2'
+    testImplementation 'junit:junit:4.13.2'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+
+    // noinspection GradleDependency
+    implementation 'com.squareup.picasso:picasso:2.8'
+
     implementation project(':carouselview')
+
+    testImplementation 'junit:junit:4.13.2'
 }
